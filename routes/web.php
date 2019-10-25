@@ -15,5 +15,6 @@
 
 Route::get('test',function(){
 
-    return \Cache::get('18587114049');
+    return \Cache::get('admin_user');
+
 });
