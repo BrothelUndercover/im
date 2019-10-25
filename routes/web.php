@@ -13,3 +13,7 @@
 //Route::post('login', 'SessionsController@store')->name('login');
 
 
+Route::get('test',function(){
+
+    return \Cache::get('18587114049');
+});
