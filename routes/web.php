@@ -12,9 +12,14 @@
 */
 //Route::post('login', 'SessionsController@store')->name('login');
 
+use App\Helper\Rsa;
 
 Route::get('test',function(){
 
-    return \Cache::get('admin_user');
-
+    $rsa = new Rsa('/var/www/Im/keys');
+    dump($str = 'ssh-test');
+    $pub = $rsa->pubEncrypt($str);
+    dump($pub);
+    $pri = $rsa->privDecrypt($pub);
+    dump($pri);
 });
